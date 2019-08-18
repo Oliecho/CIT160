@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Week 5 Exercise 2</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<p>Enter beginning odometer:</p>
+<input id="demo" type="text">
+<p>Enter ending odometer:</p>
+<input id="demo2" type="text">
+<p>Enter number of gallons:</p>
+<input id="demo3" type="text">
+<button type="button" onclick="convert()">Test Input</button>
+<div id="outputDiv"></div>
+<!--  <p id="p01"></p>  -->
+
+<script>
+function convert() {
+  var message, x, y, z;
+  message = document.getElementById("outputDiv");
+  message.innerHTML = "";
+  x = parseFloat(document.getElementById("demo").value);
+  y = parseFloat(document.getElementById("demo2").value);
+  z = parseFloat(document.getElementById("demo3").value);
+
+  if (x > y){
+    message.innerHTML = "beginning odometer can't be greater than ending odometer";
+  }
+  else {
+    message.innerHTML = "Mileage in miles per gallon: " + Math.round((y-x)/z *100)/100;
+
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Week 5 Exercise 1</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<p>Please enter volume in quarts: </p> 
+
+	<input type="text" id="quarts">
+	<button type="button" onclick="convert()">Convert</button>
+    <div id="answer"></div>
+	<script>
+
+	var quarts;
+	var formula;	
+
+	function convert()
+	{
+		quarts = parseFloat(document.getElementById("quarts").value);
+	
+
+		formula = Math.round((quarts *.946353) *100)/100;
+
+		document.getElementById('answer').innerHTML = formula;
+	};
+	</script> 
+</body>
+</html>
+
+
+
+<!-- ********************EXAM 1 Part B , Question 1 ************************* -->
+
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>How Many Acres?</title>
+<script>
+
+function computeSize()
+{
+	var w = parseFloat(document.getElementById("width").value);
+	var x = parseFloat(document.getElementById("length").value);
+	var acres = Math.round(((w * x)/43560) * 100)/100; 
+	document.getElementById('acres').innerHTML = acres;
+}
+</script>
+</head>
+
+<body>
+    <h1>How Many Acres?</h1>
+    Width (feet) <input type="text" id="width"><br>
+    Length (feet) <input type="text" id="length"><br>
+    <button type="button" onclick="computeSize()">Acres</button><br>
+    Size (acres) <div id="acres"></div>
+</body>
+</html>
+
+
+<!-- *****************EXAM 1 PART B , Question 2 ****************************** -->
+
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>Volume of a Tetrahedron</title>
+<script>
+
+	function computeVolume()
+	{
+		var length = parseFloat(document.getElementById("length").value);
+		var volume = (length * length * length)/(6 * Math.sqrt(2));
+		var round = Math.round(volume * 1000)/1000;
+		document.getElementById('volume').innerHTML = round;
+
+    }
+</script>
+</head>
+
+<body>
+    <h1>Volume of a Tetrahedron</h1>
+    Side Length <input type="text" id="length"><br>
+    <button type="button" onclick="computeVolume()">Volume</button><br>
+    Volume <div id="volume"></div>
+</body>
+</html>

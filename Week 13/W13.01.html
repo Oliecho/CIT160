@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>W12.09 Array functions </title>
+
+<script>
+
+    function testArray(){
+        
+        //var myArray = (document.getElementById('arrayList').value).split(',');
+        var myArray = [14,5,1,-10,10,3,13,19,10,14,15,-8,4,4,2,-2];
+        var result = countEvens(myArray);
+        document.getElementById('output').innerHTML = "Even numbers in the array: " + result;
+    }
+ 
+   function countEvens(list){
+       
+       var isEven = [];
+       
+       for(var index = 0; index < list.length; ++index)
+       {
+           if((list[index] % 2) === 0)
+               {
+                   isEven++;
+               }
+       }
+       return isEven;   
+   } 
+</script>
+</head>
+<body>
+<!--Enter an Array: <input type="text" id="arrayList"><br>   --> 
+<button type="button" onclick="testArray()">Even Numbers</button>
+<div id="output"></div>
+</body>
+</html>

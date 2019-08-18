@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>W08.06 First Program with Repetition</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	Enter an integer: <input type="text" id="integer">
+	<button type="button" onclick="sumOfOdds()">Total</button><br>
+    Sum of odd numbers: <div id="solution"></div>
+	<script>
+		function sumOfOdds()
+		{
+			var integer = parseInt(document.getElementById("integer").value);
+			var sum = 0;
+			var message;
+
+			for (var i = 0; i <= integer; i++){
+				
+				if ((i % 2)!== 0){
+					sum += i;
+				}
+
+			}
+			
+			message = sum;	
+
+			document.getElementById("solution").innerHTML = message;
+		}
+	</script>
+</body>
+</html>

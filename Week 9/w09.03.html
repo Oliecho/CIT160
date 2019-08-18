@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>W09.03 Two more programs with repetition</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	
+	<button type="button" onclick="fiveTimesTable()">Table</button><br>
+    Five time table: <div id="solution"></div>
+	<script>
+		function fiveTimesTable()
+		{
+
+			var message = "";
+			var i = 5;
+
+
+			for(j = 1; j <= 12; j++ )
+			{
+
+				message += i + " x " + j + " = " + i*j + "</br>";
+					
+			}
+
+			document.getElementById("solution").innerHTML = message;
+		}
+	</script>
+</body>
+</html>

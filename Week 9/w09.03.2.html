@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>W09.03 Two more programs with repetition</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	
+	<button type="button" onclick="powTable()">Powers</button><br>
+    Powers Table: <div id="solution"></div>
+	<script>
+		function powTable()
+		{
+
+			var message = "";
+			var i = 2;
+
+
+			for(j = 0; j <= 31; j++ )
+			{
+
+				if ( j < 31)
+				{
+					message += Math.pow(i, j) + ", ";
+				}
+
+				else 
+				{
+					message += Math.pow(i, j);
+				}
+					
+			}
+
+			document.getElementById("solution").innerHTML = message;
+		}
+	</script>
+</body>
+</html>

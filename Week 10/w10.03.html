@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>W11.03 Two more programs that use functions with parameters</title>
+
+<script>
+    
+    function doFV() {
+    
+    var invested = parseFloat(document.getElementById('principal').value);
+    var aRate = parseFloat(document.getElementById('rate').value);
+    var nYears = document.getElementById('years').value;
+    var perYear = document.getElementById('period').value;    
+    var result = computeFutureValue(invested, aRate, nYears, perYear);
+    document.getElementById('outputDiv').innerHTML = "Future Value: $" +
+        result.toFixed(2);
+}
+
+    function computeFutureValue(principal,annualRate, years, periodsPerYear) { 
+        
+    var futureValue = principal * (Math.pow(1 + (annualRate / periodsPerYear),(years* periodsPerYear)));
+   
+    return futureValue;
+
+}
+
+</script>
+</head>
+
+<body>                               
+Amount invested (principal) <input type="text" id="principal" size="10"><br>  
+Annual rate (example .08) <input type="text" id="rate" size="10"><br>  
+    Number of years <input type="text" id="years" size="10"><br>  
+Period per year <input type="text" id="period" size="10"><br>      
+<button type="button" onclick="doFV()">Compute future value</button>
+<div id="outputDiv"></div>
+</body>         
+</html>

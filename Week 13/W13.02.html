@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>W12.09 Array functions </title>
+
+<script>
+
+    function testArray(){
+        
+       // var myArray = (document.getElementById('arrayList').value).split(',');
+        //var multiNum = document.getElementById('multiplier').value;
+        var myArray = [ 17, 8, 9, 5, 20 ];
+        var result = multiply(myArray, 3);
+        document.getElementById('output').innerHTML = "Multiples of the Array: " + result;
+    }
+ 
+   function multiply(list, multiplier){
+      
+       var multi = [];
+       
+       for(var index = 0; index < list.length; index++)
+           {
+              multi[index] = list[index] * multiplier;
+           }
+       return multi;
+   } 
+</script>
+</head>
+<body>
+<!-- Enter an Array: <input type="text" id="arrayList"><br>
+Multiplier: <input type="text" id="multiplier"><br>  --> 
+<button type="button" onclick="testArray()">Multiply</button>
+<div id="output"></div>
+</body>
+</html>

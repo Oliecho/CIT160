@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>W10 Assignment</title>
+
+<script>
+/* Input: Temperature, wind speed
+ * Processing: Determines the windchill formula 
+ * Output: A message stating the result of the formula
+ */
+
+function doInputOutput() {
+    var first = parseFloat(document.getElementById('first').value);
+    var second = parseFloat(document.getElementById('second').value);
+    var result = createTimesTable(first, second);
+    document.getElementById('outputDiv').innerHTML = result;
+}
+
+
+function createTimesTable(num1, num2) {
+
+  return num2;
+  
+}
+
+
+</script>
+</head>
+<body>                               
+First Number: <input type="text" id="first" size="10">  
+Second Number: <input type="text" id = "second" size="10">    
+<button type="button" onclick="doInputOutput()">Wind Chill</button>
+<div id="outputDiv"></div>
+</body>         
+</html>
